@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int intMagicNumber;
+        // int intMagicNumber;
         int intUserGuess;
         
         // Asked the user for a magic number, now uses a random number from the computer.
