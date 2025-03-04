@@ -1,27 +1,9 @@
 using System;
-
-class Job
-{
-    public string _company = "";
-    public string _jobTitle = "";
-    public int _startYear = 0;
-    public int _endYear = 0;
-
-    public void Display()
-    {
-        Console.WriteLine($"Job Title: {_jobTitle} ({_company}) {_startYear}-{_endYear}");
-    }
-
-}
-
-class Resume 
-{
-    public string _name = "";
-}
 class Program
 {
     static void Main(string[] args)
     {
+        Console.WriteLine();
         Console.WriteLine("Hello Learning02 World!");
 
         Job job1 = new Job();
@@ -36,9 +18,21 @@ class Program
         job2._startYear = 2005;
         job2._endYear = 2027;
 
+        Console.WriteLine();
         job1.Display();
         job2.Display();
+        Console.WriteLine();
+        
+        Resume Resume = new Resume();
+        Resume._name = "Geoffery Vaynerchuk";
+        Resume._jobs.Add(job1);
+        Resume._jobs.Add(job2);
+
+        Resume.Display();
+        Console.WriteLine();
+        // Console.WriteLine(Resume._jobs[0]._jobTitle);
+        // Console.WriteLine($"Job: {job1._jobTitle}");
         //Console.WriteLine(job1._company);
         //Console.WriteLine(job2._company);
-    }
+        }
 }
