@@ -12,7 +12,6 @@ class Job
         _company = company;
         _jobTitle = jobTitle;
         _startYear = startYear;
-        _endYear = startYear;
         _endYear = endYear;
     }
     public void Display()
