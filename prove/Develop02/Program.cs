@@ -3,6 +3,9 @@ using System.IO;
 using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 
+
+// Resources used for this project include the provided helps from the class site, ChatGPT to explain new or misunderstood concepts and also check for consistancy with assignment requirements, and stack overflow
+
 class Program
 {
     static void Main(string[] args)
