@@ -26,4 +26,9 @@ class Person
     {
         _height = height;
     }
+
+    public virtual string GetName()
+    {
+        return $"{_firstName}, {_lastName}";
+    }
 }

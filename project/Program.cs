@@ -13,6 +13,7 @@ class Program
         Police newpolice = new Police("gun", "bob", "joe", 16);
         Console.WriteLine($"{newpolice.DisplayPolice()}");
 
-    
+        Console.WriteLine($"{newpolice.GetName()}");
+
     }
 }

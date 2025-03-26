@@ -13,5 +13,8 @@ class Police : Person
     {
         return $"{_weapons}, {DisplayInfo()}";
     }
-
+    public override string GetName()
+    {
+        return $"Captain {base.GetName()}";
+    }
 }
