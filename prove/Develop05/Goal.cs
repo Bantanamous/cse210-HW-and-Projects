@@ -1,4 +1,6 @@
-class Goal
+using System.Reflection.Metadata.Ecma335;
+
+abstract class Goal
 {
    protected string _name;
    protected string _description;
@@ -14,4 +16,26 @@ class Goal
     _status = status;
     _goalType = goalType;
    }
+  
+  public string GetName()
+  {
+      return _name;
+  }
+  public string GetDescription()
+  {
+      return _description;
+  }
+  public bool getStatus()
+  {
+      return _status;
+  }
+   public int GetPoints()
+   {
+      return _numberOfPoints;
+   }
+   virtual public string GetGoalType()
+   {
+      return _goalType;
+   }
+   
 }
