@@ -1,11 +1,14 @@
 class Simple : Goal
 {
-    public Simple(string name, string description, int points, bool status) : base(name, description, points, status, "Simple")
+    public Simple(string name, string description, int points, bool status) : base(name, description, points, status, "Simple"){}
+
+    public override void RunGoal(){}
+    public override string GetGoal()
     {
-        _name = name;
-        _description = description;
-        _numberOfPoints = points;
-        _status = status;
-        _goalType = "Simple";
+        return base.GetGoal();
+    }
+    public override int RecordEvent()
+    {
+        return 0;
     }
 }

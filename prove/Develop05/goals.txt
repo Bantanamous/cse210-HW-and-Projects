@@ -1,0 +1,4 @@
+600
+Simple|Simple|Test|100|True
+Eternal|Eternal|test|50|False
+Checklist|Check Goal|test|500|False|3|50

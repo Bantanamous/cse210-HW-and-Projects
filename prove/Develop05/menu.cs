@@ -1,8 +1,8 @@
 class Menu
 {
-    public int DisplayMenu()
+    public int DisplayMenu(int totalScore) // passes total score to display
     {
-        Console.WriteLine(); //Display Points
+        Console.WriteLine($"\nTotal Points: {totalScore}"); // display points at the top of the menu
         Console.WriteLine();
         Console.WriteLine("Menu Options:");
         Console.WriteLine("1. Create New Goal");
@@ -18,7 +18,7 @@ class Menu
 
     public int NewGoalMenu()
     {
-        Console.WriteLine("The goal types are:");
+        Console.WriteLine("\nThe goal types are:");
         Console.WriteLine("1. Simple Goal");
         Console.WriteLine("2. Eternal Goal");
         Console.WriteLine("3. Checklist Goal");
