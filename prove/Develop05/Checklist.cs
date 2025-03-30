@@ -4,12 +4,12 @@ class Checklist : Goal
     private int _targetCount;
     private int _bonus;
 
-    public Checklist(string name, string description, int points, bool status, int targetCount, int bonus)
+    public Checklist(string name, string description, int points, bool status, int targetCount, int bonus, int timesCompleted)
         : base(name, description, points, status, "Checklist")
     {
         _targetCount = targetCount;
         _bonus = bonus;
-        _timesCompleted = 0;
+        _timesCompleted = timesCompleted;
     }
 
     public override string ListGoal()
@@ -26,10 +26,11 @@ class Checklist : Goal
             _timesCompleted++;
             if (_timesCompleted >= _targetCount)
             {
-                _status = true;  // Set it as complete when the target is reached
+                _status = true;
             }
         }
     }
+
 
     public int GetTotalPoints()
     {

@@ -1,4 +1,4 @@
-600
-Simple|Simple|Test|100|True
-Eternal|Eternal|test|50|False
-Checklist|Check Goal|test|500|False|3|50
+150
+Checklist|Eat 3 meals|eat 3 meals today|50|False|3|500|2
+Eternal|Daily Prayer|Pray each day (multiple times too)|50|False
+Simple|Finish Programming assignment|Finish Final Project proposal. |100|False

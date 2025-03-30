@@ -62,7 +62,7 @@ class Program
                 int targetCount = int.Parse(Console.ReadLine());
                 Console.Write("Enter the bonus points: ");
                 int bonus = int.Parse(Console.ReadLine());
-                newGoal = new Checklist(name, description, points, false, targetCount, bonus);
+                newGoal = new Checklist(name, description, points, false, targetCount, bonus, 0);
                 break;
             default:
                 Console.WriteLine("Invalid goal type.");
