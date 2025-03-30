@@ -50,8 +50,5 @@ class Checklist : Goal
         return 0;
     }
 
-    public override void RunGoal()
-    {
-        // Logic for running the goal (if any)
-    }
+    public override void RunGoal(){}
 }

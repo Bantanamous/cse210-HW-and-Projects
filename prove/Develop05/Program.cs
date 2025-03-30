@@ -8,7 +8,7 @@ class Program
         int userChoice;
         do
         {
-            userChoice = menu.DisplayMenu(goals.TotalScore); // Use TotalScore property here
+            userChoice = menu.DisplayMenu(goals.TotalScore);
 
             switch (userChoice)
             {

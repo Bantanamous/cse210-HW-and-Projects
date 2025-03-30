@@ -10,7 +10,6 @@ class Goals
     }
 
 
-    // Allows you to set the filename dynamically
     public void SetFileName(string filename)
     {
         _filename = filename;
@@ -61,7 +60,7 @@ class Goals
                         bool.Parse(parts[4]), // Status
                         int.Parse(parts[5]), // TargetCount
                         int.Parse(parts[6]), // Bonus
-                        int.Parse(parts[7])  // TimesCompleted (NEW!)
+                        int.Parse(parts[7])  // TimesCompleted
                     ));
                     break;
             }

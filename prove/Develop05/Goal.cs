@@ -20,7 +20,7 @@ abstract class Goal
     public bool GetStatus() => _status;
     public int GetPoints() => _numberOfPoints;
     
-    public virtual void MarkComplete() // MarkComplete is now virtual
+    public virtual void MarkComplete()
     {
         _status = true;
     }

@@ -5,7 +5,7 @@ class Eternal : Goal
     // Override MarkComplete to ensure goal remains incomplete (eternal)
     public override void MarkComplete()
     {
-        // Do nothing, so the goal remains "incomplete"
+        // Do nothing, so goal remains "incomplete"
     }
 
     public override void RunGoal(){}
