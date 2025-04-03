@@ -1,23 +1,22 @@
-class Recipe
+public class Recipe
 {
-    protected string _name;
-    protected string _instructions;
-    protected List<string> _ingredients;
+    protected string Name;
+    protected List<string> Ingredients;
+    protected string Instructions;
+
+    public string GetName() => Name;
+    public List<string> GetIngredients() => Ingredients;
+    public string GetInstructions() => Instructions;
 
     public Recipe(string name, List<string> ingredients, string instructions)
     {
-        name = _name;
-        ingredients = _ingredients;
-        instructions = _instructions;
+        Name = name;
+        Ingredients = ingredients;
+        Instructions = instructions;
     }
 
     public virtual void DisplayRecipe()
     {
-        Console.WriteLine($"Recipe: {_name}");
-        Console.WriteLine($"Ingredients: {string.Join(", ", _ingredients)}");
-        Console.WriteLine($"Instructions: {_instructions}");
+        Console.WriteLine($"\nRecipe: {Name}\nIngredients: {string.Join(", ", Ingredients)}\nInstructions: {Instructions}\n");
     }
-
-    public string GetName() => _name;
-    public List<string> GetIngredients() => _ingredients;
 }

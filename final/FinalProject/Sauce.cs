@@ -1,16 +1,10 @@
-class SauceRecipe : Recipe
+public class SauceRecipe : Recipe
 {
-    private string _sauceType;
-    
-    public SauceRecipe(string name, List<string> ingredients, string instructions, string sauceType)
-        : base(name, ingredients, instructions)
-    {
-        _sauceType = sauceType;
-    }
+    public SauceRecipe(string name, List<string> ingredients, string instructions) 
+        : base(name, ingredients, instructions) {}
 
     public override void DisplayRecipe()
     {
-        Console.WriteLine($"Sauce Recipe ({_sauceType}): ");
-        base.DisplayRecipe();
+        Console.WriteLine($"[Sauce] {Name}\nIngredients: {string.Join(", ", Ingredients)}\nInstructions: {Instructions}\n");
     }
 }
