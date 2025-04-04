@@ -1,24 +1,31 @@
 public class ShoppingList
 {
-    private readonly List<string> _ingredients = new List<string>();
+    private readonly Dictionary<string, List<string>> _recipeIngredients = new Dictionary<string, List<string>>();
 
-    public void AddIngredients(List<string> ingredients)
+    // add ingredients for a specific recipe
+    public void AddIngredients(string recipeName, List<string> ingredients)
     {
-        _ingredients.AddRange(ingredients);
+        if (!_recipeIngredients.ContainsKey(recipeName))
+        {
+            _recipeIngredients[recipeName] = new List<string>();
+        }
+        _recipeIngredients[recipeName].AddRange(ingredients);
     }
 
-    public void DisplayShoppingList()
+    // To display shopping list for a specific recipe
+    public void DisplayShoppingList(string recipeName)
     {
-        if (_ingredients.Count == 0)
+        if (_recipeIngredients.ContainsKey(recipeName))
         {
-            Console.WriteLine("Shopping list is empty.");
-            return;
+            Console.WriteLine($"Shopping List for {recipeName}:");
+            foreach (var ingredient in _recipeIngredients[recipeName])
+            {
+                Console.WriteLine("- " + ingredient);
+            }
         }
-
-        Console.WriteLine("Shopping List:");
-        foreach (var item in _ingredients)
+        else
         {
-            Console.WriteLine("- " + item);
+            Console.WriteLine("No shopping list found for this recipe.");
         }
     }
 }

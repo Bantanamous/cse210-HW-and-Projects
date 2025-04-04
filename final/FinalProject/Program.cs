@@ -25,7 +25,7 @@ public class Program
             Console.WriteLine("3. Delete Recipe");
             Console.WriteLine("4. Add Note to Recipe");
             Console.WriteLine("5. Rate a Recipe");
-            Console.WriteLine("6. Show Shopping List");
+            Console.WriteLine("6. Show Shopping List for a Specific Recipe");
             Console.WriteLine("7. Exit");
             Console.Write("Choose an option: ");
 
@@ -41,7 +41,7 @@ public class Program
 
                         Console.Write("Enter ingredients (comma separated): ");
                         List<string> ingredients = new List<string>(Console.ReadLine().Split(", "));
-                        shoppingList.AddIngredients(ingredients);
+                        shoppingList.AddIngredients(name, ingredients);
 
                         Console.Write("Enter instructions: ");
                         string instructions = Console.ReadLine();
@@ -125,7 +125,9 @@ public class Program
                     }
                     break;
                 case "6":
-                    shoppingList.DisplayShoppingList();
+                    Console.Write("Enter recipe name to get the shopping list: ");
+                    string shoppingRecipeName = Console.ReadLine();
+                    shoppingList.DisplayShoppingList(shoppingRecipeName);
                     break;
                 case "7":
                     Console.WriteLine("Goodbye!");
