@@ -6,4 +6,10 @@ public class RecipeNote
     {
         _notes[recipeName] = note;
     }
+
+    public void DisplayNote(string recipeName)
+    {
+        if (_notes.ContainsKey(recipeName))
+            Console.WriteLine($"Note: {_notes[recipeName]}");
+    }
 }

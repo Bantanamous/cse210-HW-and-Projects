@@ -5,19 +5,17 @@ public class RecipeManager
     public void AddRecipe(Recipe recipe)
     {
         Recipes.Add(recipe);
+        Console.WriteLine($"Added a {recipe.GetType().Name} to the manager.");
     }
 
-    public void DisplayRecipes()
-    {
-        foreach (var recipe in Recipes)
-        {
-            recipe.DisplayRecipe();
-        }
-    }
+    public List<Recipe> GetRecipes() => Recipes;
 
     public void DeleteRecipe(string name)
     {
-        Recipes.RemoveAll(r => r.GetName().Equals(name, StringComparison.OrdinalIgnoreCase));
-        Console.WriteLine("Recipe deleted successfully.");
+        int removedCount = Recipes.RemoveAll(r => r.GetName().Equals(name, StringComparison.OrdinalIgnoreCase));
+        if (removedCount > 0)
+            Console.WriteLine("Recipe deleted successfully.");
+        else
+            Console.WriteLine("Recipe not found.");
     }
 }

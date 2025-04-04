@@ -9,6 +9,12 @@ public class ShoppingList
 
     public void DisplayShoppingList()
     {
+        if (_ingredients.Count == 0)
+        {
+            Console.WriteLine("Shopping list is empty.");
+            return;
+        }
+
         Console.WriteLine("Shopping List:");
         foreach (var item in _ingredients)
         {

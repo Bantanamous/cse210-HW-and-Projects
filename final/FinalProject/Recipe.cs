@@ -17,6 +17,6 @@ public class Recipe
 
     public virtual void DisplayRecipe()
     {
-        Console.WriteLine($"\nRecipe: {Name}\nIngredients: {string.Join(", ", Ingredients)}\nInstructions: {Instructions}\n");
+        Console.WriteLine($"Recipe: {Name}\nIngredients: {string.Join(", ", Ingredients)}\nInstructions: {Instructions}\n");
     }
 }
